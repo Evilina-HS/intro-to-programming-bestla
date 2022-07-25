@@ -9,8 +9,38 @@ const skills = ['HTML', 'JavaScript', 'CSS'];
 const skillsSection = document.getElementById('skills');
 var skillsList = skillsSection.querySelector('ul');
 
+const messageForm = document.getElementsByName('leave_message')[0];
+
 for(let i = 0; i < skills.length; i++){
     const skill = document.createElement('li');
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+    
+messageForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+    console.log(name, email, message);
+
+    const messageSection = document.getElementById('messages');
+    const messageList = messageSection.querySelector('ul');
+    const newMessage = document.createElement('li');
+    newMessage.innerHTML = `<a href="mailto:${email}">${name} wrote  </a>`;
+    newMessage.innerHTML += `<span>${ message }</span>`;
+        
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'remove';
+    removeButton.setAttribute('type','button');
+    removeButton.addEventListener ('click', (e) => {
+    const entry = removeButton.parentNode;
+    entry.remove();
+    });
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+        
+    messageList.appendChild(newMessage);
+    messageForm.reset();
+});
