@@ -1,0 +1,88 @@
+body {
+    background-image: linear-gradient(#5D8AA8, #8DA399);
+    color: rgb(16, 16, 25);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ section {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 2rem;
+ }
+ h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color:rgba(24, 6, 42, 0.682);
+ }
+ #experience {
+    background-color: #B0C4DE;
+    border: 2px solid grey;
+    border-radius: 12px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+ }
+ #skills {
+    background-color:#B0C4DE;
+    border: 2px solid grey;
+    border-radius: 12px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+ }
+ #leave_message label{
+    font-size: 16px;
+    color:rgba(30, 2, 58, 0.96)
+ }
+ #leave_message input {
+    font-size: small;
+    margin-bottom: 8px;
+    border: 1px solid rgb(39, 59, 39);
+    border-radius: 8px;
+}
+#leave_message textarea {
+    font-size: small;
+    margin-bottom: 8px;
+    padding-right: 38px;
+    padding-bottom: 35px;
+    border: 1px solid  rgb(39, 59, 39);
+    border-radius: 8px;
+}
+#submit {
+    background-color: rgb(202, 199, 205);
+    border: 1px solid rgb(39, 59, 39);
+    border-radius: 8px;
+    padding: 3px 5px;
+    font-size: x-small;
+}
+#messages {
+    background-color:rgba(239, 244, 248, 0.5);
+    border: 2px solid  rgb(39, 59, 39);
+    border-radius: 8px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+button {
+    background-color: rgb(245, 242, 249);
+    border: 1px solid  rgb(39, 59, 39);
+    border-radius: 8px;
+    padding: 3px 5px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+footer {
+    background-color:whitesmoke;
+    margin-top: 50px;
+    font-size: 16px;
+}
+img {
+    border-radius: 4px;
+    border: 3px solid #ddd;
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
