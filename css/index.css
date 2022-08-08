@@ -1,4 +1,5 @@
 body {
+    padding-top: 50px;
     background-image: linear-gradient(#5D8AA8, #8DA399);
     color: rgb(16, 16, 25);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -14,6 +15,7 @@ body {
     font-weight: bold;
     color:rgba(24, 6, 42, 0.682);
  }
+ 
  #experience {
     background-color: #B0C4DE;
     border: 2px solid grey;
@@ -85,4 +87,45 @@ img {
     max-width: 100%;
     margin-left: 5%;
     margin-right: 5%;
+}
+/*Add a style to the top navigation*/
+@media (min-width: 650px) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navigation {
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    right: 0;
+    background-color: #B0C4DE;
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 20px;
+}
+@media (min-width:920px) {
+    #experience {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+   #experience ul{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
+ }
+}
+@media (min-width: 920px) {
+    #leave_message {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+     }
+    
+    #leave_message input, textarea {
+        font-size: large;
+    }
 }
