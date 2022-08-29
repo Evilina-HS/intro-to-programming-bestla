@@ -33,7 +33,7 @@ messageForm.addEventListener('submit', (e) => {
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.setAttribute('type','button');
-    removeButton.addEventListener ('click', (e) => {
+    removeButton.addEventListener ('click', () => {
     const entry = removeButton.parentNode;
     entry.remove();
     });
@@ -43,3 +43,29 @@ messageForm.addEventListener('submit', (e) => {
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
+
+var githubRequest = new XMLHttpRequest();
+    githubRequest.open("GET", "https://api.github.com/users/Evilina-HS/repos");
+    githubRequest.send();
+    githubRequest.addEventListener("load", () => {
+    var repositories = JSON.parse(githubRequest.response);
+    console.log(repositories);
+      
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
+for (let i = 0; i < repositories.length; i += 1) {
+    var project = document.createElement('li');
+    var projectDate = document.createElement('span');
+    var projectLanguage = document.createElement('span');
+    project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+    projectDate.innerHTML = `created: ${repositories[i].created_at}`;
+    if (repositories[i].language === null) {
+        projectLanguage.innerHTML = `language: -`;
+    } else {
+    projectLanguage.innerHTML = `language: ${repositories[i].language}`;
+    }
+    projectList.appendChild(project);
+    projectList.appendChild(projectDate);
+    projectList.appendChild(projectLanguage);
+}
+ });
