@@ -16,7 +16,7 @@ body {
     color:rgba(24, 6, 42, 0.682);
  }
  
- #experience {
+  #experience {
     background-color: #B0C4DE;
     border: 2px solid grey;
     border-radius: 12px;
@@ -26,6 +26,15 @@ body {
     padding-right: 0%;
  }
  #skills {
+    background-color:#B0C4DE;
+    border: 2px solid grey;
+    border-radius: 12px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+ }
+ #projects {
     background-color:#B0C4DE;
     border: 2px solid grey;
     border-radius: 12px;
@@ -106,17 +115,24 @@ img {
     padding: 14px 20px;
     font-size: 20px;
 }
+
 @media (min-width:920px) {
-    #experience {
+    #experience, #projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
    }
-   #experience ul{
+   #experience ul {
     display: grid;
     grid-template-columns: repeat(5, auto);
     gap: 20px;
  }
+    #projects ul{
+        display:grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 10px;
+        flex: content;    
+    }
 }
 @media (min-width: 920px) {
     #leave_message {
