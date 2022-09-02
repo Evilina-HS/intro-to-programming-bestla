@@ -1,48 +1,43 @@
+
 body {
     padding-top: 50px;
-    background-image: linear-gradient(#5D8AA8, #8DA399);
+    background-image: linear-gradient(#0b1320, #808c97);
     color: rgb(16, 16, 25);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: small;
  }
 
  section {
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 2rem;
+   
  }
+ 
  h2 {
-    font-size: 32px;
+    font-family: 'Papyrus', cursive;
+    font-size: 24px;
     font-weight: bold;
     color:rgba(24, 6, 42, 0.682);
  }
+ #image {
+    display: block;
+    margin-left:0%;
+    margin-right: 0%;
+    max-width: 90%;
+    
+ }
+
+ #about, #experience, #skills, #projects {
+    background-color:  #dde5e7;
+    border: 2px solid grey;
+    border-radius: 12px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+ }
  
-  #experience {
-    background-color: #B0C4DE;
-    border: 2px solid grey;
-    border-radius: 12px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 0%;
-    padding-right: 0%;
- }
- #skills {
-    background-color:#B0C4DE;
-    border: 2px solid grey;
-    border-radius: 12px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 0%;
-    padding-right: 0%;
- }
- #projects {
-    background-color:#B0C4DE;
-    border: 2px solid grey;
-    border-radius: 12px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 0%;
-    padding-right: 0%;
- }
  #leave_message label{
     font-size: 16px;
     color:rgba(30, 2, 58, 0.96)
@@ -53,6 +48,7 @@ body {
     border: 1px solid rgb(39, 59, 39);
     border-radius: 8px;
 }
+
 #leave_message textarea {
     font-size: small;
     margin-bottom: 8px;
@@ -68,6 +64,7 @@ body {
     padding: 3px 5px;
     font-size: x-small;
 }
+
 #messages {
     background-color:rgba(239, 244, 248, 0.5);
     border: 2px solid  rgb(39, 59, 39);
@@ -77,6 +74,7 @@ body {
     padding-left: 0%;
     padding-right: 0%;
 }
+
 button {
     background-color: rgb(245, 242, 249);
     border: 1px solid  rgb(39, 59, 39);
@@ -85,11 +83,13 @@ button {
     font-size: x-small;
     margin-left: 5px;
 }
+
 footer {
     background-color:whitesmoke;
     margin-top: 50px;
     font-size: 16px;
 }
+
 img {
     border-radius: 4px;
     border: 3px solid #ddd;
@@ -105,12 +105,13 @@ img {
         justify-content: space-between;
     }
 }
+
 .navigation {
     position: fixed;
     top: 0 ;
     left: 0;
     right: 0;
-    background-color: #B0C4DE;
+    background-color: #fdfbfb;
     text-align: left;
     padding: 14px 20px;
     font-size: 20px;
