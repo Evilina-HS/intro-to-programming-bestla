@@ -1,33 +1,48 @@
 
 body {
     padding-top: 50px;
-    background-image: linear-gradient(#0b1320, #808c97);
+    background-image: linear-gradient(#0b1320, #F0FFF0);
     color: rgb(16, 16, 25);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: small;
+ }
+
+ .container {
+    position: relative;
+ }
+
+ #image {
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 85vh;
+ }
+
+ .text {
+    color:rgba(24, 6, 42, 0.682);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position:absolute;
+    top:15px;
+    right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
  }
 
  section {
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 2rem;
-   
  }
  
  h2 {
+    margin-top: 40px;
     font-family: 'Papyrus', cursive;
     font-size: 24px;
     font-weight: bold;
     color:rgba(24, 6, 42, 0.682);
  }
- #image {
-    display: block;
-    margin-left:0%;
-    margin-right: 0%;
-    max-width: 90%;
-    
- }
-
+ 
  #about, #experience, #skills, #projects {
     background-color:  #dde5e7;
     border: 2px solid grey;
@@ -45,21 +60,23 @@ body {
  #leave_message input {
     font-size: small;
     margin-bottom: 8px;
-    border: 1px solid rgb(39, 59, 39);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
+    padding-bottom: 8px;
+    padding-right: 55px;
 }
 
 #leave_message textarea {
     font-size: small;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     padding-right: 38px;
     padding-bottom: 35px;
-    border: 1px solid  rgb(39, 59, 39);
+    border: 1px solid  rgb(255, 255, 255);
     border-radius: 8px;
 }
 #submit {
     background-color: rgb(202, 199, 205);
-    border: 1px solid rgb(39, 59, 39);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
     padding: 3px 5px;
     font-size: x-small;
@@ -67,17 +84,17 @@ body {
 
 #messages {
     background-color:rgba(239, 244, 248, 0.5);
-    border: 2px solid  rgb(39, 59, 39);
+    border: 2px solid  rgb(255, 255, 255);
     border-radius: 8px;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 30%;
     padding-left: 0%;
     padding-right: 0%;
 }
 
 button {
     background-color: rgb(245, 242, 249);
-    border: 1px solid  rgb(39, 59, 39);
+    border: 1px solid  rgb(255, 255, 255);
     border-radius: 8px;
     padding: 3px 5px;
     font-size: x-small;
@@ -90,13 +107,6 @@ footer {
     font-size: 16px;
 }
 
-img {
-    border-radius: 4px;
-    border: 3px solid #ddd;
-    max-width: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
 /*Add a style to the top navigation*/
 @media (min-width: 650px) {
     .navigation {
@@ -113,8 +123,9 @@ img {
     right: 0;
     background-color: #fdfbfb;
     text-align: left;
-    padding: 14px 20px;
+    padding: 10px 50px;
     font-size: 20px;
+    z-index: 99;
 }
 
 @media (min-width:920px) {
@@ -126,23 +137,24 @@ img {
    #experience ul {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    gap: 20px;
+    gap: 50px;
  }
     #projects ul{
         display:grid;
-        grid-template-columns: repeat(3, auto);
-        gap: 10px;
+        grid-template-columns: repeat(6, auto);
+        gap: 20px;
         flex: content;    
     }
 }
 @media (min-width: 920px) {
     #leave_message {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: left;
      }
     
     #leave_message input, textarea {
-        font-size: large;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: smaller;
     }
 }
