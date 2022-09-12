@@ -5,7 +5,7 @@ const copyright = document.createElement('p');
 copyright.innerHTML = "Evilina Pustynskaya " +'<i class="far fa-copyright"></i>'+ thisYear;
 footer.appendChild(copyright);
 
-const skills = ['HTML', 'JavaScript', 'CSS'];
+const skills = ['HTML', 'JavaScript', 'CSS', 'SQL', 'Quality Assurance'];
 const skillsSection = document.getElementById('skills');
 var skillsList = skillsSection.querySelector('ul');
 
@@ -48,7 +48,7 @@ messageForm.addEventListener('submit', (e) => {
  .then(checkStatus)
  .then(response => response.json())
  .then(data => reposList(data))
- .catch(error => console.log('Houston, we have a problem', error))
+ .catch(error => alert(`Houston, we have a problem: ${error.message}`))
 
  function reposList (data){
     const projectSection = document.getElementById('projects');
@@ -58,11 +58,11 @@ messageForm.addEventListener('submit', (e) => {
         var projectDate = document.createElement('span');
         var projectLanguage = document.createElement('span');
         project.innerHTML = `<a href="${data[i].html_url}">${data[i].name}</a>`;
-        projectDate.innerHTML = `created: ${data[i].created_at}`;
+        projectDate.innerHTML = `created at: ${data[i].created_at}`;
             if (data[i].language === null) {
-                 projectLanguage.innerHTML = `language: -`;
+                 projectLanguage.innerHTML = ` programming language: -`;
             } else {
-            projectLanguage.innerHTML = `language: ${data[i].language}`;
+            projectLanguage.innerHTML = ` programming language: ${data[i].language}`;
     }
     projectList.appendChild(project);
     projectList.appendChild(projectDate);
